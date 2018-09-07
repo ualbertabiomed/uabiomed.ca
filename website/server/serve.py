@@ -22,6 +22,7 @@ class JoinHandler(tornado.web.RequestHandler):
 
 application = tornado.web.Application([
     (r"/iamanewmember", JoinHandler),
+    (r"/iamanewsponsor", JoinHandler),
     (r"/(.*)", StaticHandler, {"path": os.getcwd() + "/site/bin"})
 ], debug=True)
 
