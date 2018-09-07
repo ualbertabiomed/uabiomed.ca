@@ -17,6 +17,7 @@ class JoinHandler(tornado.web.RequestHandler):
         memb = {}
         for x in ['name', 'email', 'msg']:
             memb[x] = self.get_body_argument(x, default=None, strip=False)
+        print(self.request)
         print(memb)
         self.write('<!doctype html><meta charset=utf-8><title>redirect</title><meta http-equiv="Refresh" content="0; url=/">')
 

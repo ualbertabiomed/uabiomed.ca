@@ -7,7 +7,8 @@ open positions (tree diagram, generated)
 
 
 Server:
-mailing list
+ezmlm and qmail. This is the mailing list and mailserver I should use
+
 sql database of members
 Member management program
 
