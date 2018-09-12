@@ -1,3 +1,3 @@
-website/site/bin/
-website/site/.sass-cache/
+website/bin/
+website/.sass-cache/
 database/.database_info

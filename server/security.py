@@ -1,0 +1,50 @@
+import os
+import sha3
+import database
+
+def getSalt():
+    """
+    Returns the salt
+    """
+    salt = sha3.sha3_512(str(os.urandom(64)).encode('utf-8'))
+    # 64 bytes of randomness, as sha512 produces a length of 64 bytes
+    return salt.hexdigest()
+
+def getHash(passwd, salt):
+    """
+    Returns sha3_512 hash of the passwd concated to the string
+    """
+    return sha3.sha3_512((passwd + salt).encode('utf-8')).hexdigest()
+
+def validateUser(ccid, passwd):
+    """
+    Confirms the user is in the database, and the password is correct
+
+    Returns the user, or null if invalid
+    """
+
+    # Inner function is used so there is a single exit point
+    # this makes it easy to clean up the datebase connection
+    def inner(conn, ccid, passwd):
+        usr = database.getHash(conn, ccid)
+        if usr is None:
+            return
+
+        if getHash(passwd, usr["salt"]) != usr["hash"]:
+            return
+
+        return database.getPersonByX(conn, "ccid", usr["ccid"])
+
+    conn = database.getConnection()
+    usr = inner(conn, ccid, passwd) # inner is the function defined above
+    conn.close()
+
+    return usr
+
+
+"""
+if __name__ == "__main__":
+    print(validateUser('reckhard', '1497646'))
+    print(validateUser('notreckhard', '1497646'))
+    print(validateUser('reckhard', 'badpassword'))
+"""
