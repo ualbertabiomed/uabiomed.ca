@@ -1,3 +1,4 @@
 website/bin/
 website/.sass-cache/
-database/.database_info
+server/.database_info
+server/__pycache__/
