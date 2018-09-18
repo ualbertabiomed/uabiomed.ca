@@ -1,6 +1,7 @@
 import os
 import sha3
 import database
+import base64
 
 def getSalt():
     """
@@ -15,6 +16,10 @@ def getHash(passwd, salt):
     Returns sha3_512 hash of the passwd concated to the string
     """
     return sha3.sha3_512((passwd + salt).encode('utf-8')).hexdigest()
+
+def genToken(data, secret):
+    tok = data + " " + getHash(data, secret)
+    return base64.encodestring(tok)
 
 def validateUser(ccid, passwd):
     """

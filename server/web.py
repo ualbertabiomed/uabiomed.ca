@@ -4,8 +4,10 @@ import tornado.web
 
 import os
 import json
+import logging
 
 import app
+import security
 
 
 class StaticHandler(tornado.web.StaticFileHandler):
@@ -28,15 +30,16 @@ class JoinHandler(tornado.web.RequestHandler):
         self.write('<!doctype html><meta charset=utf-8><title>redirect</title><meta http-equiv="Refresh" content="0; url=/">')
 
 application = tornado.web.Application([
+    (r"/admin/?(.*)", StaticHandler, {"path": os.getcwd() + "/admin_site"}),
     (r"/iamanewmember", JoinHandler),
     (r"/iamanewsponsor", JoinHandler),
     *app.app.endpoints(),
     (r"/(.*)", StaticHandler, {"path": os.getcwd() + "/website/bin"})
 ], debug=True)
-
 try:
     print("server starting")
     application.listen(8888)
+    logging.getLogger('tornado.access').disabled = True # using own logger
     tornado.ioloop.IOLoop.current().start()
 except KeyboardInterrupt:
     print("server exited")

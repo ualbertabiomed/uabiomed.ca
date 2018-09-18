@@ -8,15 +8,21 @@ import time
 import tornado.web
 import json
 
+import security
+
 
 
 class PocketTornado():
     ACCEPTED = 'ok'
     UNDEFINED = "undefined"
     UNAUTHORIZED = "unauth"
-    def __init__(self):
+    def __init__(self, secret="secret", timeout=60*60):
         self.funcs = {}
         self.handlers = []
+        self.authorizers = set() # api calls that authorize if they succed
+        self.authorized = set() # api calls that must be authorized
+        self.secret = secret
+        self.timeout = timeout
 
     def listen(self, port, debug=False):
         app = self.createApp(debug)
@@ -26,7 +32,7 @@ class PocketTornado():
     def replaceStrings(self, path):
         print(path)
         path = re.sub("/", r"/", path)
-        path = re.sub("<int>", r"(\\d+)", path)
+        path = re.sub("<int>", "(\\\\d+)", path)
         path = re.sub("<string>", "([^\\/]+)", path)
         path = re.sub("<all>", "(.*)", path)
         path += "\\/?"
@@ -54,6 +60,14 @@ class PocketTornado():
 
     def put(self, path, content_type=UNDEFINED):
         return self.apifunction(path, "put", content_type)
+
+    def secure(self, func):
+        self.authorized.add(func)
+        return func
+
+    def makeSecure(self, func):
+        self.authorizers.add(func)
+        return func
 
     def static(self, webpath, localpath, remap={}, append_file_type=".html"):
         webpath = self.replaceStrings(webpath)
@@ -122,16 +136,21 @@ class PocketTornado():
         return tornadoHandler
 
     def newwrapper(self, func, verb, content_type):
+        pt = self
         def wrapper(self, *args):
             now = time.time()
             try:
-                if verb in ("post", "put"):
-                    output = func(
-                        json.loads(self.request.body.decode("utf-8")),
-                        *args
-                    )
-                elif verb in ("get", "delete"):
-                    output = func(*args)
+                output = ""
+                if output == "":
+                    if verb in ("post", "put"):
+                        output = func(
+                            json.loads(self.request.body.decode("utf-8")),
+                            *args
+                        )
+                    elif verb in ("get", "delete"):
+                        output = func(*args)
+
+
                 if output == PocketTornado.ACCEPTED:
                     self.set_header("Content-Type", "text/plain")
                     self.set_status(202)
