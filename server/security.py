@@ -18,8 +18,15 @@ def getHash(passwd, salt):
     return sha3.sha3_512((passwd + salt).encode('utf-8')).hexdigest()
 
 def genToken(data, secret):
-    tok = data + " " + getHash(data, secret)
-    return base64.encodestring(tok)
+    tok = data + "~" + getHash(data, secret)
+    return base64.encodestring(tok.encode('utf-8')).decode('utf-8').strip()
+
+def validateToken(tok, secret):
+    inp = base64.decodebytes(tok.encode('utf-8')).decode('utf-8')
+    data = inp.split('~')
+    hsh = getHash(data[0], secret)
+    return hsh == data[1]
+
 
 def validateUser(ccid, passwd):
     """

@@ -1,0 +1,11 @@
+.hor{
+    display: flex;
+    flex-direction: row;
+}
+.ver{
+    display: flex;
+    flex-direction: column;
+}
+.pad{
+    padding: 10%;
+}

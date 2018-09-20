@@ -30,7 +30,6 @@ class PocketTornado():
         tornado.ioloop.IOLoop.current().start()
 
     def replaceStrings(self, path):
-        print(path)
         path = re.sub("/", r"/", path)
         path = re.sub("<int>", "(\\\\d+)", path)
         path = re.sub("<string>", "([^\\/]+)", path)
@@ -137,8 +136,10 @@ class PocketTornado():
 
     def newwrapper(self, func, verb, content_type):
         pt = self
+        ttime = 0
         def wrapper(self, *args):
             now = time.time()
+            ttime = now
             try:
                 output = ""
                 if output == "":
@@ -167,12 +168,6 @@ class PocketTornado():
                     self.write(output)
                     if content_type != PocketTornado.UNDEFINED:
                         self.set_header("Content-Type", content_type)
-                prettyPrintServerMessage(
-                    self._status_code,
-                    verb,
-                    self.request.path,
-                    self.request.remote_ip,
-                    ((time.time() - now) * 1000))
             except (KeyError, json.decoder.JSONDecodeError, Error400):
                 self.set_header("Content-Type", "text/plain")
                 self.set_status(400)
@@ -181,6 +176,12 @@ class PocketTornado():
                 self.set_header("Content-Type", "text/plain")
                 self.set_status(404)
                 self.finish("404: Not Found")
+            prettyPrintServerMessage(
+                self._status_code,
+                verb,
+                self.request.path,
+                self.request.remote_ip,
+                ((time.time() - ttime) * 1000))
 
         return wrapper
 

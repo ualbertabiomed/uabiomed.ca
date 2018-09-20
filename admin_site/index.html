@@ -1,15 +1,26 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>UAB Admin</title>
-  <meta name="description" content="For managing members">
-  <meta name="author" content="Jacob Reckhard">
-  <link rel="stylesheet" href="admin/main.css">
-  <script src="admin/main.js"></script>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <title>UAB Admin</title>
+        <meta name="description" content="For managing members">
+        <meta name="author" content="Jacob Reckhard">
+        <link rel="stylesheet" href="main.css">
+        <script src="js/coms.js"></script>
+    </head>
 
-<body>
-    Admin Page
-</body>
+    <body>
+        <div class="ver pad">
+            <input placeholder="CCID" type="text" id="usr">
+            <input placeholder="Password" type="password" id="passwd">
+            <button onclick="form_login();">Login</button>
+        </div>
+    </body>
+    <script>
+        function form_login(){
+            let ccid = document.getElementById("usr").value;
+            let passwd = document.getElementById("passwd").value;
+            login(ccid, passwd);
+        }
+    </script>
 </html>

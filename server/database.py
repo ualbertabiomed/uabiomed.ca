@@ -52,7 +52,7 @@ def editPerson(conn, stuid, fname, lname, ccid, rank):
     conn.commit()
 
 def getFriends(conn, stuid):
-    rank = getPersonByID(conn, stuid)["rank"][:-1]
+    rank = getPersonByX(conn, "ccid", stuid)["rank"][:-1]
     with conn.cursor() as cursor:
         sql = "SELECT * FROM users WHERE rank LIKE'"+rank+"%' AND rank != '"+rank+"';"
         cursor.execute(sql)
@@ -60,7 +60,7 @@ def getFriends(conn, stuid):
         return result
 
 def getSubordinates(conn, stuid):
-    rank = getPersonByID(conn, stuid)["rank"]
+    rank = getPersonByX(conn, "ccid", stuid)["rank"]
     with conn.cursor() as cursor:
         sql = "SELECT * FROM users WHERE rank LIKE'"+rank+"%' AND rank != '"+rank+"';"
         print(sql)
