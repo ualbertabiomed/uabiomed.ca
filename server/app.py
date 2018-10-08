@@ -6,7 +6,8 @@ import database
 import security
 
 
-app = PocketTornado(secret=security.getHash("secret", security.getSalt()))
+#app = PocketTornado(secret=security.getHash("secret", security.getSalt()))
+app = PocketTornado(secret="TMP FOR TESTING")
 app.default_content = "application/json"
 
 def secure(func):
@@ -23,7 +24,10 @@ def make_secure(func):
         out = func(*args, **kwargs)
         if out != PocketTornado.UNAUTHORIZED:
             data = json.loads(out)
-            data["token"] = security.genToken(json.dumps({"timeout": int(time.time() + app.timeout)}), app.secret)
+            data["token"] = security.genToken(json.dumps(
+                {"timeout": int(time.time() + app.timeout),
+                    "ccid": data["ccid"]}
+                ), app.secret)
         return data
     return inner
 
@@ -31,6 +35,20 @@ def make_secure(func):
 @app.post("/auth_test")
 @secure
 def test(data):
+    return '{"Success": "True"}'
+
+@app.post("/flipMember")
+@secure
+def flipMember(data):
+    usr = security.getUserFromToken(data["token"], app.secret)
+    flippie = data["ccid"]
+
+    conn = database.getConnection()
+    if database.isSubordinate(conn, usr, flippie):
+        database.flipStatus(conn, flippie)
+
+    conn.close()
+
     return '{"Success": "True"}'
 
 @app.post("/authenticate")
@@ -41,14 +59,22 @@ def admin(data):
         return json.dumps(usr)
     return PocketTornado.UNAUTHORIZED
 
+@app.get("/teams")
+def getTeams():
+    return_data = {}
+    conn = database.getConnection()
+    return_data['teams'] = database.getTeams(conn)
+    conn.close()
+    return return_data or PocketTornado.UNAUTHORIZED
+
 @app.post("/getallsubordinates")
 @secure
 def getallsubordinates(data):
     return_data = {}
     conn = database.getConnection()
-    return_data["members"] = database.getSubordinates(conn, data["ccid"])
+    return_data["members"] = database.getSubordinates(conn, data["ccid"], data["rank"])
     conn.close()
-    return return_data
+    return return_data or PocketTornado.UNAUTHORIZED
 
 
 
