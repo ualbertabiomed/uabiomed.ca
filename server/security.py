@@ -1,5 +1,6 @@
 import os
 import sha3
+import json
 import database
 import base64
 
@@ -26,6 +27,14 @@ def validateToken(tok, secret):
     data = inp.split('~')
     hsh = getHash(data[0], secret)
     return hsh == data[1]
+
+def getUserFromToken(tok, secret):
+    if validateToken(tok, secret):
+        inp = base64.decodebytes(tok.encode('utf-8')).decode('utf-8')
+        data = json.loads(inp.split('~')[0])
+        return data["ccid"]
+
+
 
 
 def validateUser(ccid, passwd):

@@ -1,0 +1,74 @@
+#member_list{
+    list-style: none;
+}
+.member{
+    display: flex;
+    flex-direction: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #eee;
+    margin: 10px;
+    padding: 10px;
+}
+.member, .not-confirmed {/* Look up how to do and in css */
+    background-color: aqua;
+}
+.member .member-person{ }
+.member .member-rank{ }
+.member div{
+    flex-grow: 1;
+}
+.member button{
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: 0.2s;
+}
+.member button:hover{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+.member button:active{
+    background-color: grey;
+}
+.member .member-delete{
+    background-color: red;
+}
+.member .member-confirm{
+    background-color: green;
+}
+.member .disabled{
+    background-color: #eee!important;
+}
+
+#team_list{
+    columns: 2;
+}
+.team-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    break-inside: avoid;
+}
+.team-goto{
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.2s;
+    background-color: #CCC;
+}
+.team-goto:hover{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    background-color: #BBB;
+}
+.team-goto:active{
+    background-color: #333;
+}
+
+#new_member{
+    padding: 20px;
+    background-color: #4CAF50;
+}
