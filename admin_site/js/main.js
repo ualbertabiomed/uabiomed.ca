@@ -18,10 +18,10 @@ function addMember(person, team, confirmed, ccid){
     let accept = "";
     if(confirmed == 1){
         disabled = "disabled";
-        accept = "Unconfirm";
+        accept = "Associte";
     }else{
         isconfirmed  = "not-confirmed";
-        accept = "Confirm";
+        accept = "Developer";
     }
     team = getTeamFromRank(team);
     let html = `
