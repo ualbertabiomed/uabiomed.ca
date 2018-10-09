@@ -45,7 +45,7 @@ def getTeams(conn):
 
 def createPerson(conn, fname, lname, ccid, rank, status):
     with conn.cursor() as cursor:
-        sql = "INSERT INTO users (fname, lname, ccid, rank, status) VALUES (%s, %s, %s, %s, %s, %s)"
+        sql = "INSERT INTO users (fname, lname, ccid, rank, status) VALUES (%s, %s, %s, %s, %s)"
         cursor.execute(sql, (fname, lname, ccid, rank, str(status)))
 
         salt = security.getSalt()
@@ -56,7 +56,7 @@ def createPerson(conn, fname, lname, ccid, rank, status):
 
 def editPerson(conn, fname, lname, ccid, rank, status):
     with conn.cursor() as cursor:
-        sql = "REPLACE INTO users (fname, lname, ccid, rank, status) VALUES (%s, %s, %s, %s, %s, %s)"
+        sql = "REPLACE INTO users (fname, lname, ccid, rank, status) VALUES (%s, %s, %s, %s, %s)"
         cursor.execute(sql, (fname, lname, ccid, rank, str(status)))
     conn.commit()
 
@@ -87,7 +87,7 @@ def getSubordinates(conn, ccid, desired_rank):
 
 def flipStatus(conn, flippie):
     person = getPersonByX(conn, "ccid", flippie)
-    editPerson(conn, person["ccid"], person["fname"], person["lname"], person["ccid"], person["rank"], (person["status"] + 1) % 2)
+    editPerson(conn, person["fname"], person["lname"], person["ccid"], person["rank"], (person["status"] + 1) % 2)
 
 def getHash(conn, ccid):
     with conn.cursor() as cursor:

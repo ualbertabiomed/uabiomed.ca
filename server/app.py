@@ -37,6 +37,35 @@ def make_secure(func):
 def test(data):
     return '{"Success": "True"}'
 
+@app.post("/addMember")
+@secure
+def addMember(data):
+    usr = security.getUserFromToken(data["token"], app.secret)
+
+    conn = database.getConnection()
+    user = database.getPersonByX(conn, "ccid", usr)
+    if data["rank"].startswith(user["rank"]):
+        database.createPerson(conn, data["fname"], data["lname"],
+                data["ccid"], data["rank"], database.CONFIRMED)
+
+    conn.close()
+
+    return '{"Success": "True"}'
+
+@app.post("/deleteMember")
+@secure
+def deleteMember(data):
+    usr = security.getUserFromToken(data["token"], app.secret)
+    flippie = data["ccid"]
+
+    conn = database.getConnection()
+    if database.isSubordinate(conn, usr, flippie):
+        database.deletePersonByID(conn, flippie)
+
+    conn.close()
+
+    return '{"Success": "True"}'
+
 @app.post("/flipMember")
 @secure
 def flipMember(data):

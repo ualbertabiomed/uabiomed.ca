@@ -1,4 +1,4 @@
-const address = "http://localhost:8888/";
+const address = window.location.href.split('/')[0]+'//'+window.location.href.split('/')[2] + '/';
 function login(usr, passwd){
     doFetch("authenticate", 'POST', {ccid:usr, passwd:passwd})
         .then(response=>{return response.json();})
@@ -26,7 +26,7 @@ function doFetch(sub_url, req_type, bdy){
         if(localStorage.tok != undefined){
             bdy.token = localStorage.getItem("tok");
         }else{
-            bdy.token = "eyJ0aW1lb3V0IjogMH1+bGFsYWxsbGE=";
+            bdy.token = btoa("{\"timeout\": 0}~notahash");
         }
     }
     return fetch(address+sub_url, {
