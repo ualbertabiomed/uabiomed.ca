@@ -15,7 +15,7 @@
         <div class="content">
             <h3>Team Developer</h3>
             <p><b>Description of Role:</b>You must decide on a specific project team with which to work for the semester. Your team will place trust in you to work on longer-term projects and can be trusted to meet their designated duties. In return, we ask for a commitment of 2-4 hours per week to your team, and that you attend all team meetings.
-<br>
+            <br>
             <b>Requirements:</b>Team developers will be assigned work and deadlines by their Lead. On average, team developers will be expected to contribute 2-4 hours per week to UAlberta Biomed.</p>
         </div>
     </article>
@@ -48,7 +48,7 @@
         <div class="content">
             <h3>President</h3>
             <p>The President oversees both the project and executive branches of the student group. The President will review project progress by chairing leadership team meetings and help set the direction for the current and future projects. As all Vice-Presidents report to the President, the President oversees all executive portfolios, providing required input and approval to each.
-</p>
+            </p>
         </div>
     </article>
 </section>
@@ -58,14 +58,24 @@
         <h2>Sign up here!</h2>
     </header>
     <p>Joining our group will expose you to invaluable research and development experience in the biomed sector. You will have the opportunity to meet unique and like-minded people working to expand their skill set and work towards a common goal.</p>
-    <p>Please specify whether you would like to be a team developer or an associte member in your message. Remember, the team developer position is reserved for those who can make a consistent 2-4 hour per-week time commitment and can attend team meetings. This ensures trust within a team and continuity of projects.</p>
+    <p>Please specify whether you would like to be a team developer or an associate member in your message. Remember, the team developer position is reserved for those who can make a consistent 2-4 hour per-week time commitment and can attend team meetings. This ensures trust within a team and continuity of projects.</p>
     <form action="/iamanewmember" method="post">
         <div class="row gtr-uniform">
-            <div class="col-6 col-12-xsmall">
+            <div class="col-4 col-6-medium col-12-xsmall">
                 <input type="text" name="name" id="name" value="" placeholder="Name">
             </div>
-            <div class="col-6 col-12-xsmall">
+            <div class="col-4 col-6-medium col-12-xsmall">
                 <input type="email" name="email" id="email" value="" placeholder="Email">
+            </div>
+            <div class="col-4 col-12-medium">
+                <select name="team" id="team">
+                    <option value="">- Team -</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Control Systems">Control Systems</option>
+                    <option value="Power Systems">Power Systems</option>
+                    <option value="Clinical">Clinical</option>
+                    <option value="Structural">Structural</option>
+                </select>
             </div>
             <div class="col-12">
                 <textarea name="msg" id="message" placeholder="Tell us why you want to join..." rows="6"></textarea>
