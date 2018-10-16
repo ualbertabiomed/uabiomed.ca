@@ -28,8 +28,8 @@ class JoinHandler(tornado.web.RequestHandler):
             memb[x] = self.get_body_argument(x, default=None, strip=False)
         print(memb)
         mail.send_message("plz 1et m3 j0in",
-                "Hello Uab club. My name is {}, and I am interested in joining your {} team.\n" +
-                "Here's why you should let me join:\n{}\nHit me back, my email is {}"
+                ("Hello Uab club. My name is {}, and I am interested in joining your {} team.\n" +
+                 "Here's why you should let me join:\n{}\nHit me back, my email is {}")
                 .format(memb["name"], memb["team"], memb["msg"], memb["email"]),
                 ["uabiomed@ualberta.ca"]
             )
