@@ -27,7 +27,12 @@ class JoinHandler(tornado.web.RequestHandler):
         for x in ['name', 'email', 'team', 'msg']:
             memb[x] = self.get_body_argument(x, default=None, strip=False)
         print(memb)
-        mail.send_message("plz 1et m3 j0in", "Hello Uab club. My name is {}, and I am interested in joining your {} team. \nHere's why you should let me join:\n{}\n Hit me back, my email is {}".format(memb["name"], memb["team"], memb["msg"], memb["email"]), ["uabiomed@ualberta.ca"])
+        mail.send_message("plz 1et m3 j0in",
+                "Hello Uab club. My name is {}, and I am interested in joining your {} team.\n" +
+                "Here's why you should let me join:\n{}\nHit me back, my email is {}"
+                .format(memb["name"], memb["team"], memb["msg"], memb["email"]),
+                ["uabiomed@ualberta.ca"]
+            )
         self.write('<!doctype html><meta charset=utf-8><title>redirect</title><meta http-equiv="Refresh" content="0; url=/">')
 
 application = tornado.web.Application([
