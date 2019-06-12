@@ -1,6 +1,6 @@
 import requests
 
-api_key = ""
+api_key = "a4336104ae1878c3d6b5583c3be4a312-bd350f28-18fd8c7c"
 
 def use_api_key(func):
     def inner(*args, **kwargs):
@@ -20,4 +20,4 @@ def send_message(subject, text, to):
               "to": to, "subject": subject, "text": text})
 
 if __name__ == "__main__":
-    print(send_message("Hello", "Peter", ["peter@reckhard.ca", "jacob@reckhard.ca"]))
+    print(send_message("Hello", "Test", ["jacobreckhard@gmail.com"]))
