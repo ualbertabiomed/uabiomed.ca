@@ -1,4 +1,3 @@
-<Layout>
     <section id="banner">
         <div class="content">
             <header>
@@ -69,8 +68,3 @@
             </article>
         </div>
     </section>
-</Layout>
-
-<script>
-    import Layout from './layout.svelte'
-</script>

@@ -1,4 +1,4 @@
-<div id="sidebar" class="inactive">
+<div id="sidebar" class={sidebarStateString}>
     <a href="#sidebar" class="toggle" on:click={toggleSidebar} >Toggle</a>
     <div class="inner">
         <nav id="menu">
@@ -7,7 +7,7 @@
             </header>
             <ul>
                 {#each links as link}
-                    <li><a href={link.loc}>{link.name}</a></li>
+                    <li><a on:click={()=>setSidebar(false)} href={link.loc}>{link.name}</a></li>
                 {/each}
             </ul>
         </nav>
@@ -20,19 +20,19 @@
 </div>
 
 <script>
+    import { isSidebarEnabled } from '../stores/app.js'
+
     const links = [
         { loc: '/', name: 'About us' },
-        { loc: '/join', name: 'Join the Group' },
-        { loc: '/events', name: 'Events' },
-        { loc: '/sponsors', name: 'Sponsor Us' },
-        { loc: '/docs', name: 'Club Documents' },
+        { loc: '/team', name: 'The Team' },
+        { loc: '/outreach', name: 'Educational Outreach' },
+        { loc: '/contact', name: 'Contact Us' },
+        { loc: '/press', name: 'Press' },
     ]
 
-    const toggleSidebar = (event) => {
-        event.preventDefault();
-        event.stopPropagation();
+    $: sidebarStateString = $isSidebarEnabled ? 'active' : 'inactive'
 
-        document.getElementById('sidebar').classList.toggle('active')
-        document.getElementById('sidebar').classList.toggle('inactive')
-    }
+    const toggleSidebar = (event) => isSidebarEnabled.set(!$isSidebarEnabled)
+    const setSidebar = (val) => isSidebarEnabled.set(val)
+
 </script>
