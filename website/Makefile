@@ -3,7 +3,7 @@ ASSETS=assets
 CSS=$(ASSETS)/css
 SASS=$(ASSETS)/sass
 BIN=bin
-website: index.html team.html join.html events.html sponsors.html docs.html
+website: index.html join.html events.html sponsors.html docs.html
 	mkdir -p $(BIN)
 	sass $(SASS)/main.scss $(CSS)/main.css
 	cp -r assets/ bin/
