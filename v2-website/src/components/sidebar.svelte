@@ -21,7 +21,7 @@
 
 <script>
     const links = [
-        { loc: '/', name: 'Home' },
+        { loc: '/', name: 'About us' },
         { loc: '/join', name: 'Join the Group' },
         { loc: '/events', name: 'Events' },
         { loc: '/sponsors', name: 'Sponsor Us' },

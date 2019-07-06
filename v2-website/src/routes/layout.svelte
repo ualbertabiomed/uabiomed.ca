@@ -19,6 +19,11 @@
                                 <span class="label">Instagram</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="https://ca.linkedin.com/company/uabiomed" class="icon fa-linkedin">
+                                <span class="label">Linkin</span>
+                            </a>
+                        </li>
                     </ul>
                 </header>
                 <slot><!-- Content --></slot>
