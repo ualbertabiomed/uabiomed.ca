@@ -1,5 +1,5 @@
 <div id="sidebar" class={sidebarStateString}>
-    <a href="#" class="toggle" on:click={toggleSidebar} >Toggle</a>
+    <a href="#sidebar" class="toggle" on:click={toggleSidebar} >Toggle</a>
     <div class="inner">
         <nav id="menu">
             <header class="major">
