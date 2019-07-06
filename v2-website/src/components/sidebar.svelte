@@ -1,5 +1,5 @@
 <div id="sidebar" class={sidebarStateString}>
-    <a href="#sidebar" class="toggle" on:click={toggleSidebar} >Toggle</a>
+    <a href="#" class="toggle" on:click={toggleSidebar} >Toggle</a>
     <div class="inner">
         <nav id="menu">
             <header class="major">
@@ -32,7 +32,11 @@
 
     $: sidebarStateString = $isSidebarEnabled ? 'active' : 'inactive'
 
-    const toggleSidebar = (event) => isSidebarEnabled.set(!$isSidebarEnabled)
+    const toggleSidebar = (event) => {
+        event.preventDefault()
+        isSidebarEnabled.set(!$isSidebarEnabled)
+        return false
+    }
     const setSidebar = (val) => isSidebarEnabled.set(val)
 
 </script>

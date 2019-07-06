@@ -19,40 +19,24 @@ class StaticHandler(tornado.web.StaticFileHandler):
             url_path = url_path + '.html'
         return url_path
 
-
-
-class JoinHandler(tornado.web.RequestHandler):
-    def post(self):
-        memb = {}
-        for x in ['name', 'email', 'team', 'msg']:
-            memb[x] = self.get_body_argument(x, default=None, strip=False)
-        print(memb)
-        mail.send_message("You have 1 new member request",
-                ("Hello Uab club. My name is {}, and I am interested in joining your {} team.\n" +
-                 "Here's why you should let me join:\n{}\nHit me back, my email is {}")
-                .format(memb["name"], memb["team"], memb["msg"], memb["email"]),
-                ["uabiomed@ualberta.ca"]
-            )
-        self.write('<!doctype html><meta charset=utf-8><title>redirect</title><meta http-equiv="Refresh" content="0; url=/">')
-
-class SponsorHandler(tornado.web.RequestHandler):
+class MessageHandler(tornado.web.RequestHandler):
     def post(self):
         memb = {}
         for x in ['name', 'email', 'msg']:
             memb[x] = self.get_body_argument(x, default=None, strip=False)
         print(memb)
-        mail.send_message("Sponsor message",
-                ("Msg:\n{}" + "\n\nName: {}, Email: {}\n")
-                .format(memb["msg"], memb["name"], memb["email"]),
+        mail.send_message("UAB Website - Contact Us Form",
+                ("From: {}\nEmail: {}\nContact type: {}\nMessage:\n{}\n")
+                .format(memb["name"], memb["email"], memb["reason"], memb["msg"]),
                 ["uabiomed@ualberta.ca"]
             )
         self.write('<!doctype html><meta charset=utf-8><title>redirect</title><meta http-equiv="Refresh" content="0; url=/">')
 
 
+
 application = tornado.web.Application([
     (r"/admin/?(.*)", StaticHandler, {"path": os.getcwd() + "/admin_site"}),
-    (r"/iamanewmember", JoinHandler),
-    (r"/iamanewsponsor", SponsorHandler),
+    (r"/message", MessageHandler),
     *app.app.endpoints(),
     (r"/(.*)", StaticHandler, {"path": os.getcwd() + "/website/bin"})
 ], debug=True)
