@@ -14,15 +14,15 @@ import security
 class StaticHandler(tornado.web.StaticFileHandler):
     def parse_url_path(self, url_path):
         if not url_path or url_path.endswith('/'):
-            url_path = url_path + 'index'
+            url_path = url_path + 'index.html'
         if not '.' in url_path:
-            url_path = url_path + '.html'
+            url_path = url_path + '/index.html'
         return url_path
 
 class MessageHandler(tornado.web.RequestHandler):
     def post(self):
         memb = {}
-        for x in ['name', 'email', 'msg']:
+        for x in ['name', 'email', 'msg', 'reason']:
             memb[x] = self.get_body_argument(x, default=None, strip=False)
         print(memb)
         mail.send_message("UAB Website - Contact Us Form",
@@ -38,7 +38,7 @@ application = tornado.web.Application([
     (r"/admin/?(.*)", StaticHandler, {"path": os.getcwd() + "/admin_site"}),
     (r"/message", MessageHandler),
     *app.app.endpoints(),
-    (r"/(.*)", StaticHandler, {"path": os.getcwd() + "/website/bin"})
+    (r"/(.*)", StaticHandler, {"path": os.getcwd() + "/web-bin/export"})
 ], debug=True)
 try:
     print("server starting")

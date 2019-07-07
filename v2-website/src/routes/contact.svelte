@@ -13,7 +13,7 @@
             </div>
              <div class="col-4 col-12-medium">
                 <select name="reason" id="reason">
-                    <option value="">I am...</option>
+                    <option value="unselected">I am...</option>
                     <option value="member">Looking to join</option>
                     <option value="sponsor">Looking to sponsor</option>
                     <option value="other">Something else</option>

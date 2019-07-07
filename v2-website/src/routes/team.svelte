@@ -25,11 +25,11 @@
     import Team from '../components/team.svelte'
     const teams = [
         {
-            title: 'Control Team',
-            blurb: 'The control team is working on designing the feedback system of the exoskeleton, as well as designing the system that allows the suit to give the user mechanical advantage.',
+            title: 'Control and Power Team',
+            blurb: 'The control and power team are working on designing the feedback system of the exoskeleton, as well as designing the system that allows the suit to give the user mechanical advantage.',
             members: [
                 { name: 'Laura Petrich', src: 'images/people/Laura.jpg', role: 'Control team lead', year: '4th year Computer Science, Honors' },
-                { name: 'Taylor Zowtuk', src: 'images/people/Taylor.jpg', role: 'Control team lead', year: '3rd year Computer Science, After Degree' }
+                { name: 'Taylor Zowtuk', src: 'images/people/Taylor.jpg', role: 'Control team member', year: '3rd year Computer Science, After Degree' }
             ]
         },
         {
@@ -44,7 +44,7 @@
             title: 'Commercial Team',
             blurb: 'The commercial team is working on securing sponsorships for UAB.',
             members: [
-                { name: 'Sunny Yang', src: 'images/people/Sunny.jpg', role: 'Commercial team Lead', year: '2nd Year Civil Engineering' }
+                { name: 'Sunny Yang', src: 'images/people/Sunny.jpg', role: 'Commercial team member', year: '2nd Year Civil Engineering' }
             ]
         },
         {

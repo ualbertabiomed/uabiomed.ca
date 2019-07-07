@@ -3,3 +3,4 @@ website/.sass-cache/
 .database_info
 .mailgun_apikey
 server/__pycache__/
+web-bin/

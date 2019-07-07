@@ -1,4 +1,7 @@
-cd website;
-make;
+cd v2-website;
+npm run export;
 cd ../;
-sudo python3 server/web.py
+rm -rf ./web-bin;
+mkdir web-bin
+cp -r ./v2-website/__sapper__/export ./web-bin;
+sudo python3 server/web.py;
