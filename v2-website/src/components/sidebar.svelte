@@ -24,10 +24,12 @@
 
     const links = [
         { loc: '/', name: 'About us' },
+        { loc: '/exoskeleton', name: 'ALEX - The Exoskeleton' },
         { loc: '/team', name: 'The Team' },
-        { loc: '/outreach', name: 'Educational Outreach' },
+        { loc: '/info', name: 'Why Join a Biomedical Engineering Group? (Non-STEM students)' },
+        { loc: '/join', name: 'Join the Team' },
+        { loc: '/press', name: 'Press and Educational Outreach' },
         { loc: '/contact', name: 'Contact Us' },
-        { loc: '/press', name: 'Press' },
     ]
 
     $: sidebarStateString = $isSidebarEnabled ? 'active' : 'inactive'

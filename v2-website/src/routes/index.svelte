@@ -28,7 +28,7 @@
             <article>
                 <span class="icon fa-diamond"></span>
                 <div class="content">
-                    <h3>The Competition</h3>
+                    <h3><a href="https://venturewell.org/debut/">The Competition</a></h3>
                     <p>
                         DEBUT is a US based competition, strictly for undergraduate
                         students. The competition requires teams to identify a
@@ -41,7 +41,7 @@
             <article>
                 <span class="icon fa-paper-plane"></span>
                 <div class="content">
-                    <h3>The Project</h3>
+                    <h3><a href="/exoskeleton">The Project</a></h3>
                     <p>
                         The team's current project is designing and prototyping an
                         exoskeleton for the workplace. The purpose of the
@@ -50,14 +50,14 @@
                         give users a 33% mechanical advantage, up to a full lift of
                         75lbs. This exoskeleton will also track motion and give
                         feedback to the user to prevent repetitive motion injuries
-                        and unhealthy rand of motion injuries.
+                        and unhealthy range of motion injuries.
                     </p>
                 </div>
             </article>
             <article>
                 <span class="icon fa-users"></span>
                 <div class="content">
-                    <h3>The Team</h3>
+                    <h3><a href="/team">The Team</a></h3>
                     <p>
                         Joining our group will not only provide you with invaluable
                         research experience. You will also gain great team building
