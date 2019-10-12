@@ -59,6 +59,7 @@
                 { name: 'Cyrus Diego', src: 'images/people/Cyrus.jpg', role: 'Control and Power Lead - Hardware', year: '3rd Year Computer Engineering, Software Specialization' },
                 { name: 'Adil Younus', src: 'images/people/Adil.jpg', role: 'Control and Power Lead - Power', year: '2nd Year Electrical Engineering' },
                 { name: 'Qiulin Yu', src: 'images/people/Qiulin.jpg', role: 'Control and Power Team Member', year: '3rd Year Mechanical Engineering' },
+                { name: 'Jacob Reckhard', src: 'images/people/Jacob.jpg', role: 'Control and Power Team Member', year: '4th Year Mechanical Engineering' },
             ]
         },
         {
@@ -77,8 +78,8 @@
             title: 'Commercial Team',
             blurb: 'The Commercial team works on securing corporate sponsorships, assessing the marketability of the device, and budgeting for the teams prototyping.',
             members: [
-                // Poor Sunny, the biomechanics team has more leads then people, and here Sunny is, the only member on a team, and still isn't a lead
-                // Seems like discrimination against civil engineers to me
+                { name: 'Josh Lau', src: 'images/people/Josh.jpg', role: 'Commercial Team Lead', year: '4th year Mechanical Engineering' },
+                { name: 'Victor Egruen-Echaiz', src: 'images/people/Victor.jpg', role: 'Commercial Team Lead', year: '3rd Year Business, Human Resources Major' },
                 { name: 'Sunny Yang', src: 'images/people/Sunny.jpg', role: 'Commercial Team Member', year: '2nd Year Civil Engineering' },
             ]
         },

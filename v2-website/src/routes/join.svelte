@@ -1,7 +1,12 @@
 <section>
     <h2> Join the Team </h2>
-    <p> If you are interested in working with our Biomechanics, Control and Power, or Commercial teams, please fill out the form found here: </p>
-    <a href="https://forms.gle/y6L7iAEML6wbzNni8"> Click here to go to form </a>
+    <p>
+        We are currently at full capacity for the Biomechanics and Controls
+        teams. If you are looking to join the commercial team, please apply
+        here. Thank you for your interest and look forward to more
+        opportunities with us in the future.
+    </p>
+    <a href="https://forms.gle/y6L7iAEML6wbzNni8"> Join UABiomed </a>
 </section>
 
 <style>
@@ -15,10 +20,14 @@
         border: 3px solid green;
         border-radius: 10px;
         padding: 10px;
-        background-color: #4C5;
+        /* background-color: #4C5; */
     }
 
     a:hover {
-        background-color: #293;
+        background-color: #999;
+    }
+
+    p {
+        max-width: 600px
     }
 </style>

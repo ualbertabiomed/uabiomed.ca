@@ -1,5 +1,12 @@
 <header id="header">
-    <a href="/" class="logo">UAlberta <strong>Biomed</strong></a>
+    <a href="/" class="logo">
+        <div>
+            <h1 class="logo">UABiomed</h1>
+            <span id="logo" class="image object">
+                <img src="images/logo.webp" alt="" />
+            </span>
+        </div>
+    </a>
     <ul class="icons">
         {#each medias as media}
             <li>
@@ -17,3 +24,13 @@
     ]
 </script>
 
+<style>
+    div {
+        display: flex;
+        align-items: center;
+    }
+    .image img {
+        height: auto;
+        width: 60px;
+    }
+</style>
