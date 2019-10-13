@@ -16,8 +16,8 @@
             <li><a href="#learn-more" class="button big">Learn More</a></li>
         </ul>
     </div>
-    <span class="image object">
-        <img src="images/logo.webp" alt="" />
+    <span class="image object video">
+         <video src="video.mp4" width="480" controls> </video>
     </span>
 </section>
 <section id="learn-more">
@@ -89,6 +89,13 @@
     </div>
 </section>
 
+<style>
+.video {
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+}
+</style>
 
 <script>
     import Sponsor from '../components/sponsor.svelte'
