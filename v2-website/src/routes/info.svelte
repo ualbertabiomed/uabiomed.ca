@@ -82,9 +82,7 @@
         medical devices development, you will have the opportunity to learn
         about medical research and you can even do your own research in the
         healthcare market. You will build your competitive advantage in the
-        industry and ultimately increase your chance market. You will build
-        your competitive advantage in the industry and ultimately increase your
-        chance.
+        industry and ultimately increase your chance market.
     </p>
 
     <div class="t">

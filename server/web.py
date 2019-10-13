@@ -42,7 +42,7 @@ application = tornado.web.Application([
 ], debug=True)
 try:
     print("server starting")
-    application.listen(80)
+    application.listen(3000)
     logging.getLogger('tornado.access').disabled = True # using own logger
     tornado.ioloop.IOLoop.current().start()
 except KeyboardInterrupt:

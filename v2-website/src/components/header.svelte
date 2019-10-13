@@ -3,7 +3,7 @@
         <div>
             <h1 class="logo">UABiomed</h1>
             <span id="logo" class="image object">
-                <img src="images/logo.webp" alt="" />
+                <img src="images/logo.jpg" alt="" />
             </span>
         </div>
     </a>
