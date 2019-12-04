@@ -4,3 +4,4 @@ website/.sass-cache/
 .mailgun_apikey
 server/__pycache__/
 web-bin/
+v2-website/static/video.mp4
