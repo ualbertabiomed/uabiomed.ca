@@ -2,6 +2,7 @@
     .hor {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     .page {
         width: 80%;
@@ -10,6 +11,7 @@
     }
     img {
         margin: 0 20px;
+        padding: 10px;
     }
     .img1 {
         max-width: 20vw;
