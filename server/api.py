@@ -70,6 +70,7 @@ class PocketTornado():
 
     def static(self, webpath, localpath, remap={}, append_file_type=".html"):
         webpath = self.replaceStrings(webpath)
+        print(webpath)
         a = tornado.web.StaticFileHandler
         fmap = {}
         for key in remap.keys():
@@ -102,6 +103,7 @@ class PocketTornado():
         for path in sorted(
                 self.funcs.keys(),
                 reverse=True):  # this ensures \/(.*)\/? is at the end
+            print(f"Path: {path}")
             if isinstance(self.funcs[path], tuple):
                 self.handlers.append((path, *self.funcs[path]))
                 continue

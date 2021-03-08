@@ -13,6 +13,7 @@ import security
 
 class StaticHandler(tornado.web.StaticFileHandler):
     def parse_url_path(self, url_path):
+        print(url_path)
         if not url_path or url_path.endswith('/'):
             url_path = url_path + 'index.html'
         if not '.' in url_path:
@@ -42,7 +43,8 @@ application = tornado.web.Application([
 ], debug=True)
 try:
     print("server starting")
-    application.listen(3000)
+    # print(app.app.endpoints())
+    application.listen(80)
     logging.getLogger('tornado.access').disabled = True # using own logger
     tornado.ioloop.IOLoop.current().start()
 except KeyboardInterrupt:
