@@ -17,3 +17,4 @@ python3 -m pip install tornado
 python3 -m pip install pysha3
 python3 -m pip install pymysql
 
+test
