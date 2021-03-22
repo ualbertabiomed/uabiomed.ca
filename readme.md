@@ -12,7 +12,7 @@ Our website's server runs on a linux server hosted by the [Cybera Rapid Access C
 
 ### Serving the website
 
-Attach to the "Webserver" TMUX session (see below for details and commands), cd to the uab\v2-website directory, and run `sudo ./run.sh`.
+Attach to the "Webserver" TMUX session (see below for details and commands), cd to the ~/uab directory, and run `sudo ./run.sh`.
 
 ### TMUX
 
