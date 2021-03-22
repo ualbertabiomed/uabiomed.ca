@@ -25,6 +25,7 @@
     const links = [
         { loc: '/', name: 'About us' },
         { loc: '/exoskeleton', name: 'ALEX - The Exoskeleton' },
+        { loc: '/3dwrist', name: '3D Wrist Project'},
         { loc: '/team', name: 'The Team' },
         { loc: '/info', name: 'Why Join a Biomedical Engineering Group? (Non-STEM students)' },
         { loc: '/join', name: 'Join the Team' },
