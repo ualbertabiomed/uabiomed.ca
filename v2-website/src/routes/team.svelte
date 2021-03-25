@@ -54,12 +54,20 @@
             title: 'Control and Power Team',
             blurb: 'The Control and Power team is working on designing the feedback system for the exoskeleton, as well as designing the system that allows the suit to give the user a mechanical advantage.',
             members: [
-                { name: 'Laura Petrich', src: 'images/people/Laura.jpg', role: 'Control and Power Team Manager', year: '4th Year Computer Science, Honors' },
-                { name: 'Taylor Zowtuk', src: 'images/people/Taylor.jpg', role: 'Control and Power Lead - Software', year: '3rd Year Computing Science, After Degree' },
-                { name: 'Cyrus Diego', src: 'images/people/Cyrus.jpg', role: 'Control and Power Lead - Hardware', year: '3rd Year Computer Engineering, Software Specialization' },
-                { name: 'Adil Younus', src: 'images/people/Adil.jpg', role: 'Control and Power Lead - Power', year: '2nd Year Electrical Engineering' },
-                { name: 'Qiulin Yu', src: 'images/people/Qiulin.jpg', role: 'Control and Power Team Member', year: '3rd Year Mechanical Engineering' },
-                { name: 'Jacob Reckhard', src: 'images/people/Jacob.jpg', role: 'Control and Power Team Member', year: '4th Year Mechanical Engineering' },
+                { name: 'Justin Boileau', src: 'images/people/Justin.jpg', role: 'Control and Power Team Lead - Software', year: '3rd Year Computer Engineering, Software Specialization' },
+                { name: 'Daren Trin', src: 'images/people/Daren.jpg', role: 'Control and Power Team Lead - Electrical', year: '4th Year Computer Science' },
+                { name: 'Ryan Kortbeek', src: 'images/people/Ryan.jpg', role: 'Control and Power Team Member - Software', year: '4th Year Computer Engineering, Software Specialization' },
+                { name: 'Preston Ling', src: 'images/people/Placeholder.jpg', role: 'Control and Power Team Member - Software', year: '4th Year Computer Science'},
+                { name: 'Ethan Lai', src: 'images/people/Placeholder.jpg', role: 'Control and Power Team Member - Electrical', year: '4th Year Electrical Engineering'},
+                { name: 'Keish Chandel', src: 'images/people/Placeholder.jpg', role: 'Control and Power Team Member - Electrical', year: '4th Year Electrical Engineering' },
+                { name: 'Gordon Ren', src: 'images/people/Placeholder.jpg', role: 'Control and Power Team Member - Electrical', year: '4th Year Electrical Engineering' },
+                // { name: 'Laura Petrich', src: 'images/people/Laura.jpg', role: 'Control and Power Team Manager', year: '4th Year Computer Science, Honors' },
+                //{ name: 'Taylor Zowtuk', src: 'images/people/Taylor.jpg', role: 'Control and Power Lead - Software', year: '3rd Year Computing Science, After Degree' },
+                //{ name: 'Cyrus Diego', src: 'images/people/Cyrus.jpg', role: 'Control and Power Lead - Hardware', year: '3rd Year Computer Engineering, Software Specialization' },
+                //{ name: 'Adil Younus', src: 'images/people/Adil.jpg', role: 'Control and Power Lead - Power', year: '2nd Year Electrical Engineering' },
+                //{ name: 'Qiulin Yu', src: 'images/people/Qiulin.jpg', role: 'Control and Power Team Member', year: '3rd Year Mechanical Engineering' },
+                //{ name: 'Jacob Reckhard', src: 'images/people/Jacob.jpg', role: 'Control and Power Team Member', year: '4th Year Mechanical Engineering' },
+            
             ]
         },
         {
