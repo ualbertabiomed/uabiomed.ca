@@ -75,7 +75,12 @@
             blurb: 'The Biomechanics team is working on the structural design of the exoskeleton. They investigate human motion and work to build an ergonomic and effective suit that the Control and Power team can bring to life.',
             members: [
                 { name: 'Isobel Tetreau', src: 'images/people/Isobel.jpg', role: 'Biomechanics Team Manager', year: '4th Year Mechanical Engineering, Biomedical Specialization' },
-                { name: 'Ahmed Abd El-Gelil', src: 'images/people/Ahmed.png', role: 'Biomechanics Team Lead', year: '3rd Year Mechanical Engineering, Biomedical Specialization' },
+                { name: 'Brianna Kwas', src: 'images/people/Placeholder.jpg', role: 'Biomechanics Team Member', year: '' },
+                { name: 'Eric Kwas', src: 'images/people/Eric.jpg', role: 'Biomechanics Team Member, Lower Arm and Elbow', year: '2nd Year Mechanical Engineering' },
+                { name: 'Femi Akinola', src: 'images/people/Femi.jpg', role: 'Biomechanics Team Member, Lower Arm', year: '3rd Year Mechanical Engineering' },
+                { name: 'Mehtab Malik', src: 'images/people/Placeholder.jpg', role: 'Biomechanics Team Member, Elbow', year: '4th Year Mechanical Engineering' },
+                { name: 'Warren Leung Kam Tsang', src: 'images/people/Warren.jpg', role: 'Biomechanics Team Member', year: '4th Year Mechanical Engineering' },
+                //{ name: 'Ahmed Abd El-Gelil', src: 'images/people/Ahmed.png', role: 'Biomechanics Team Lead', year: '3rd Year Mechanical Engineering, Biomedical Specialization' },
                 { name: 'Xiao Meng', src: 'images/people/Xiao.jpg', role: 'Biomechanics Team Lead', year: '3rd Year Mechanical Engineering, Biomedical Specialization' },
                 { name: 'Tully Underhill', src: 'images/people/Tully.jpg', role: 'Biomechanics Team Lead', year: '3rd Year Mechanical Engineering, Biomedical Specialization' },
                 { name: 'Isaiah Wong', src: 'images/people/Isaiah.jpg', role: 'Biomechanics Team Member - Motor Mount Specialist', year: '3rd Year Mechanical Engineering' },
@@ -92,13 +97,26 @@
             ]
         },
         {
+            title: 'Biomechanics Team',
+            blurb: 'The Biomechanics team is working on the structural design of the exoskeleton. They investigate human motion and work to build an ergonomic and effective suit that the Control and Power team can bring to life.',
+            members: [
+                { name: 'Taylor Bulbuc', src: 'images/people/TaylorB.jpg', role: '3D Wrist Project Team Lead', year: '5th Year Mechanical Engineering, Biomedical Specialization'},
+                { name: '', src: 'images/people/Placeholder.jpg', role: '3D Wrist Project Team Member', year: ''},
+                { name: '', src: 'images/people/Placeholder.jpg', role: '3D Wrist Project Team Member', year: ''},
+                { name: '', src: 'images/people/Placeholder.jpg', role: '3D Wrist Project Team Member', year: ''},
+                { name: '', src: 'images/people/Placeholder.jpg', role: '3D Wrist Project Team Member', year: ''}
+            ]
+        },
+        {
             title: 'Executive Team',
             blurb: 'The executive team is working on making sure everything is going along smoothly, and nothing gets missed.',
             members: [
-                { name: 'Ben Hallworth', src: 'images/people/Ben.jpg', role: 'President', year: '4th Year Mechanical Engineering, Biomedical Specialization' },
-                { name: 'Alicia MacDonald', src: 'images/people/Alicia.jpg', role: 'Project Manager', year: '4th Year Mechanical Engineering, Biomedical Specialization' },
-                { name: 'Aabid Wadood', src: 'images/people/Aabid.jpg', role: 'VP External', year: '3rd Year Mechanical Engineering, Biomedical Specialization' },
-                { name: 'Qibang Feng', src: 'images/people/Qibang.jpg', role: 'VP Finance', year: '4th Year Finance Major, Economics Minor' },
+                { name: 'Adil Younus', src: 'images/people/Adil.jpg', role: 'President', year: '4th Year Electrical Engineering' },
+                { name: 'Weilin Qiu', src: 'images/people/Weilin.jpg', role: 'VP Communications, Mechanical Team Member', year: '3rd Year Mechanical Engineering' },
+                { name: 'Ben Hallworth', src: 'images/people/Ben.jpg', role: 'Ex-President, Founder', year: '4th Year Mechanical Engineering, Biomedical Specialization' },
+                { name: 'Alicia MacDonald', src: 'images/people/Alicia.jpg', role: 'Ex-President, Founder', year: '4th Year Mechanical Engineering, Biomedical Specialization' },
+                //{ name: 'Aabid Wadood', src: 'images/people/Aabid.jpg', role: 'VP External', year: '3rd Year Mechanical Engineering, Biomedical Specialization' },
+                //{ name: 'Qibang Feng', src: 'images/people/Qibang.jpg', role: 'VP Finance', year: '4th Year Finance Major, Economics Minor' },
             ]
         },
     ]
