@@ -6,8 +6,7 @@
         here. Thank you for your interest and look forward to more
         opportunities with us in the future.
     </p>
-    <!-- <a href="https://forms.gle/y6L7iAEML6wbzNni8"> Join UABiomed </a> -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc515l4AUS6or1QI5nsys4h5-k0YYNmqr9J12i0FNQBM-zwug/viewform?embedded=true" width="640" height="2509" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <a href="https://forms.gle/L31cJbbFUnpcPqor8"> Join UABiomed </a>
 </section>
 
 <style>
