@@ -1,10 +1,7 @@
 <section>
-    <h2> Join the Team </h2>
+    <h2>Join the Team</h2>
     <p>
-        We are currently at full capacity for the Biomechanics and Controls
-        teams. If you are looking to join the commercial team, please apply
-        here. Thank you for your interest and look forward to more
-        opportunities with us in the future.
+        Our Mechanical, Electrical, Software, and Commerical teams are all open to new members! Hit the link below to apply!
     </p>
     <a href="https://forms.gle/L31cJbbFUnpcPqor8"> Join UABiomed </a>
 </section>
