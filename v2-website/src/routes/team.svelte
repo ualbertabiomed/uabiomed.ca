@@ -61,6 +61,7 @@
                 { name: 'Ethan Lai', src: 'images/people/Placeholder.jpg', role: 'Control and Power Team Member - Electrical', year: '3rd Year Electrical Engineering'},
                 { name: 'Keish Chandel', src: 'images/people/Placeholder.jpg', role: 'Control and Power Team Member - Electrical', year: '3rd Year Electrical Engineering' },
                 { name: 'Gordon Ren', src: 'images/people/Placeholder.jpg', role: 'Control and Power Team Member - Electrical', year: '3rd Year Electrical Engineering' },
+                { name: 'Alphonso Dineros', src: 'images/people/Placeholder.jpg', role: 'Control and Power Team Member - Software', year: '3rd Year Computer Engineering, Software Specialization' }
                 // { name: 'Laura Petrich', src: 'images/people/Laura.jpg', role: 'Control and Power Team Manager', year: '4th Year Computer Science, Honors' },
                 //{ name: 'Taylor Zowtuk', src: 'images/people/Taylor.jpg', role: 'Control and Power Lead - Software', year: '3rd Year Computing Science, After Degree' },
                 //{ name: 'Cyrus Diego', src: 'images/people/Cyrus.jpg', role: 'Control and Power Lead - Hardware', year: '3rd Year Computer Engineering, Software Specialization' },
