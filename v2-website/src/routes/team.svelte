@@ -98,14 +98,15 @@
             ]
         },
         {
-            title: 'Biomechanics Team',
-            blurb: 'The Biomechanics team is working on the structural design of the exoskeleton. They investigate human motion and work to build an ergonomic and effective suit that the Control and Power team can bring to life.',
+            title: '3D Wrist Project Team',
+            blurb: 'The 3D Wrist Project Team is designing and developing a 3D-printed synthetic wrist model, composed of synthetic bone and ligaments with similar anatomical and biomechanical properties as those of a human wrist.',
             members: [
                 { name: 'Taylor Bulbuc', src: 'images/people/TaylorB.jpg', role: '3D Wrist Project Team Lead', year: '5th Year Mechanical Engineering, Biomedical Specialization'},
-                { name: '', src: 'images/people/Placeholder.jpg', role: '3D Wrist Project Team Member', year: ''},
-                { name: '', src: 'images/people/Placeholder.jpg', role: '3D Wrist Project Team Member', year: ''},
-                { name: '', src: 'images/people/Placeholder.jpg', role: '3D Wrist Project Team Member', year: ''},
-                { name: '', src: 'images/people/Placeholder.jpg', role: '3D Wrist Project Team Member', year: ''}
+                { name: 'Isaiah Wong', src: 'images/people/Isaiah2.jpg', role: '3D Wrist Project Team Member', year: '4th Year Mechanical Engineering, Biomedical Specialization'},
+                { name: 'Tully Underhill', src: 'images/people/Placeholder.jpg', role: '3D Wrist Project Team Member', year: '4th Year Mechanical Engineering, Biomedical Specialization'},
+                { name: 'Rushi Patel', src: 'images/people/Rushi_Patel.jpg', role: '3D Wrist Project Team Member', year: '3rd Year Mechanical Engineering'},
+                { name: 'Hersh Srivastava', src: 'images/people/Hersh.jpg', role: '3D Wrist Project Team Member', year: '3rd Year Civil Engineering'},
+                { name: 'Yahia Elsayed', src: 'images/people/Yahia.jpg', role: '3D Wrist Project Team Member', year: '3rd Year Mechanical Engineering'}
             ]
         },
         {
