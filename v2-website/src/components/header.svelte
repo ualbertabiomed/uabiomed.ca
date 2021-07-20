@@ -18,7 +18,7 @@
 
 <script>
     const medias = [
-        {name: 'Newsletter Subscription', link: 'http://eepurl.com/hjH5uf', icon: 'fa-envelope'},
+        {name: 'Newsletter Subscription', link: 'http://eepurl.com/hjH5uf', icon: 'fa-envelope-square'},
         {name: 'Facebook', link: 'https://www.facebook.com/UAlbertaBiomed', icon: 'fa-facebook' },
         {name: 'Instagram', link: 'https://www.instagram.com/uabiomed/', icon: 'fa-instagram' },
         {name: 'Linkedin', link: 'https://ca.linkedin.com/company/uabiomed', icon: 'fa-linkedin' },
