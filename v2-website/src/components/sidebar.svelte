@@ -7,18 +7,7 @@
             </header>
             <ul>
                 {#each links as link}
-                    {#if !link.submenu}
                     <li><a on:click={()=>setSidebar(false)} href={link.loc}>{link.name}</a></li>
-                    {:else}
-                    <li>
-                        <span class="opener">{link.name}</span>
-                        <ul>
-                            {#each link.options as option}
-                                <li><a on:click={()=>setSidebar(false)} href={option.loc}>{option.name}</a></li>
-                            {/each}
-                        </ul>
-                    </li>
-                    {/if}
                 {/each}
             </ul>
         </nav>
@@ -34,17 +23,14 @@
     import { isSidebarEnabled } from '../stores/app.js'
 
     const links = [
-        { loc: '/', name: 'About us', submenu: false, options: [] },
-        { loc: '/exoskeleton', name: 'ALEX - The Exoskeleton', submenu: false, options: [] },
-        { loc: '/3dwrist', name: '3D Wrist Project', submenu: false, options: []},
-        { loc: '/team', name: 'The Team', submenu: false, options: [] },
-        { loc: '/info', name: 'Why Join a Biomedical Engineering Group? (Non-STEM students)', submenu: false, options: [] },
-        { loc: '/join', name: 'Join the Team', submenu: false, options: [] },
-        { loc: '/press', name: 'Press and Educational Outreach', submenu: false, options: [] },
-        { loc: '/contact', name: 'Contact Us', submenu: false, options: [] },
-        { loc: '/', name: '(Web Testing)', submenu: true, 
-            options: 
-                [ { loc: '/team', name: 'Test 1'} ]}
+        { loc: '/', name: 'About us' },
+        { loc: '/exoskeleton', name: 'ALEX - The Exoskeleton' },
+        { loc: '/3dwrist', name: '3D Wrist Project'},
+        { loc: '/team', name: 'The Team' },
+        { loc: '/info', name: 'Why Join a Biomedical Engineering Group? (Non-STEM students)' },
+        { loc: '/join', name: 'Join the Team' },
+        { loc: '/press', name: 'Press and Educational Outreach' },
+        { loc: '/contact', name: 'Contact Us' },
     ]
 
     $: sidebarStateString = $isSidebarEnabled ? 'active' : 'inactive'
