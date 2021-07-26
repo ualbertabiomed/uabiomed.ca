@@ -34,14 +34,14 @@
     import { isSidebarEnabled } from '../stores/app.js'
 
     const links = [
-        { loc: '/', name: 'About us', submenu: false},
-        { loc: '/exoskeleton', name: 'ALEX - The Exoskeleton', submenu: false },
-        { loc: '/3dwrist', name: '3D Wrist Project', submenu: false},
-        { loc: '/team', name: 'The Team', submenu: false },
-        { loc: '/info', name: 'Why Join a Biomedical Engineering Group? (Non-STEM students)', submenu: false },
-        { loc: '/join', name: 'Join the Team', submenu: false },
-        { loc: '/press', name: 'Press and Educational Outreach', submenu: false },
-        { loc: '/contact', name: 'Contact Us', submenu: false },
+        { loc: '/', name: 'About us', submenu: false, options: [] },
+        { loc: '/exoskeleton', name: 'ALEX - The Exoskeleton', submenu: false, options: [] },
+        { loc: '/3dwrist', name: '3D Wrist Project', submenu: false, options: []},
+        { loc: '/team', name: 'The Team', submenu: false, options: [] },
+        { loc: '/info', name: 'Why Join a Biomedical Engineering Group? (Non-STEM students)', submenu: false, options: [] },
+        { loc: '/join', name: 'Join the Team', submenu: false, options: [] },
+        { loc: '/press', name: 'Press and Educational Outreach', submenu: false, options: [] },
+        { loc: '/contact', name: 'Contact Us', submenu: false, options: [] },
         { loc: '/', name: '(Web Testing)', submenu: true, 
             options: 
                 [ { loc: '/team', name: 'Test 1'} ]}
