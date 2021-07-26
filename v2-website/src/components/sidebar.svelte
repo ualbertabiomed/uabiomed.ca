@@ -15,7 +15,7 @@
                             <ul>
                                 {#each link.submenu as submenu}
                                     <li><a on:click={()=>setSidebar(false)} href = {submenu.loc}>{submenu.name}</a></li>
-                            {   /each}
+                                {/each}
                             </ul>
                         </li>
                     {/if}
