@@ -7,7 +7,18 @@
             </header>
             <ul>
                 {#each links as link}
-                    <li><a on:click={()=>setSidebar(false)} href={link.loc}>{link.name}</a></li>
+                    {#if link.has_sub === 0}
+                        <li><a on:click={()=>setSidebar(false)} href={link.loc}>{link.name}</a></li>
+                    {:else}
+                        <li>
+                            <span class="opener">{link.name}</span>
+                            <ul>
+                                {#each link.submenu as submenu}
+                                    <li><a on:click={()=>setSidebar(false)} href = {submenu.loc}>{submenu.name}</a></li>
+                            {   /each}
+                            </ul>
+                        </li>
+                    {/if}
                 {/each}
             </ul>
         </nav>
@@ -23,14 +34,16 @@
     import { isSidebarEnabled } from '../stores/app.js'
 
     const links = [
-        { loc: '/', name: 'About us' },
-        { loc: '/exoskeleton', name: 'ALEX - The Exoskeleton' },
-        { loc: '/3dwrist', name: '3D Wrist Project'},
-        { loc: '/team', name: 'The Team' },
-        { loc: '/info', name: 'Why Join a Biomedical Engineering Group? (Non-STEM students)' },
-        { loc: '/join', name: 'Join the Team' },
-        { loc: '/press', name: 'Press and Educational Outreach' },
-        { loc: '/contact', name: 'Contact Us' },
+        { loc: '/', name: 'About us', has_sub: 0, submenu: [] },
+        { loc: '/exoskeleton', name: 'ALEX - The Exoskeleton', has_sub: 0, submenu: [] },
+        { loc: '/3dwrist', name: '3D Wrist Project', has_sub: 0, submenu: []},
+        { loc: '/team', name: 'The Team', has_sub: 0, submenu: [] },
+        { loc: '/info', name: 'Why Join a Biomedical Engineering Group? (Non-STEM students)', has_sub: 0, submenu: [] },
+        { loc: '/join', name: 'Join the Team', has_sub: 0, submenu: [] },
+        { loc: '/press', name: 'Press and Educational Outreach', has_sub: 0, submenu: [] },
+        { loc: '/contact', name: 'Contact Us', has_sub: 0, submenu: [] },
+        { loc: '/team', name: '(web Testing)', has_sub: 1, 
+            submenu: [ { loc: '/3dwrist', name: 'Test 1'} ] }
     ]
 
     $: sidebarStateString = $isSidebarEnabled ? 'active' : 'inactive'
