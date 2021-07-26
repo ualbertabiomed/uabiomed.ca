@@ -11,7 +11,7 @@
                 {/each}
                 -->
                 <li><a on:click={()=>setSidebar(false)} href={'/'}>About Us</a></li>
-                <li><a on:click={()=>setSidebar(false)} href={'/exoskeleton'}>ALEX - The Exoskeleton</a></li>
+                <li><a on:click={()=>setSidebar(false)} href={'../routes/exoskeleton.svelte'}>ALEX - The Exoskeleton</a></li>
                 <li><a on:click={()=>setSidebar(false)} href={'/3dwrist'}>3D Wrist Project</a></li>
                 <li><a on:click={()=>setSidebar(false)} href={'/team'}>The Team</a></li>
                 <li><a on:click={()=>setSidebar(false)} href={'/info'}>Why Join a Biomedical Engineering Group? (Non-STEM students)</a></li>
