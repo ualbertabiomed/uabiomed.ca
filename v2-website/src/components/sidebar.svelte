@@ -9,6 +9,13 @@
                 {#each links as link}
                     <li><a on:click={()=>setSidebar(false)} href={link.loc}>{link.name}</a></li>
                 {/each}
+                <li>
+                    <span class="opener">Test Submenu</span>
+                    <ul>
+                        <li><a on:click={()=>setSidebar(false)} href = '/team'>Test 1 (Team Page)</a></li>
+                        <li><a on:click={()=>setSidebar(false)} href = '/exoskeleton'>Test 2 (Exoskeleton Page)</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <footer id="footer">
