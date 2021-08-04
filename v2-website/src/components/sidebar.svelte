@@ -10,7 +10,7 @@
                     <li><a on:click={()=>setSidebar(false)} href={link.loc}>{link.name}</a></li>
                 {/each}
                 <li>
-                    <span class="opener">Test Submenu</span>
+                    <span class={submenuStateString} on:click={toggleSubmenu}>Test Submenu</span>
                     <ul>
                         <li><a on:click={()=>setSidebar(false)} href = '/team'>Test 1 (Team Page)</a></li>
                         <li><a on:click={()=>setSidebar(false)} href = '/exoskeleton'>Test 2 (Exoskeleton Page)</a></li>
@@ -28,6 +28,7 @@
 
 <script>
     import { isSidebarEnabled } from '../stores/app.js'
+    import { isSubmenuEnabled } from '../stores/app.js'
 
     const links = [
         { loc: '/', name: 'About us', },
@@ -42,11 +43,19 @@
 
     $: sidebarStateString = $isSidebarEnabled ? 'active' : 'inactive'
 
+    $: submenuStateString = $isSubmenuEnabled ? 'opener active' : 'opener'
+
     const toggleSidebar = (event) => {
         event.preventDefault()
         isSidebarEnabled.set(!$isSidebarEnabled)
         return false
     }
     const setSidebar = (val) => isSidebarEnabled.set(val)
+
+    const toggleSubmenu = (event) => {
+        event.preventDefault()
+        isSubmenuEnabled.set(!$isSubmenuEnabled)
+        return false
+    }
 
 </script>
