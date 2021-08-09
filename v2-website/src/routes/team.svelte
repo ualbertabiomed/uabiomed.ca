@@ -95,9 +95,11 @@
             title: 'Commercial Team',
             blurb: 'The Commercial team works on securing corporate sponsorships, assessing the marketability of the device, and budgeting for the teams prototyping.',
             members: [
-                { name: 'Josh Lau', src: 'images/people/Josh.jpg', role: 'Commercial Team Lead', year: '4th year Mechanical Engineering' },
-                { name: 'Victor Egruen-Echaiz', src: 'images/people/Victor.jpg', role: 'Commercial Team Lead', year: '3rd Year Business, Human Resources Major' },
-                { name: 'Sunny Yang', src: 'images/people/Sunny.jpg', role: 'Commercial Team Member', year: '2nd Year Civil Engineering' },
+                // { name: 'Josh Lau', src: 'images/people/Josh.jpg', role: 'Commercial Team Lead', year: '4th year Mechanical Engineering' },
+                // { name: 'Victor Egruen-Echaiz', src: 'images/people/Victor.jpg', role: 'Commercial Team Lead', year: '3rd Year Business, Human Resources Major' },
+                // { name: 'Sunny Yang', src: 'images/people/Sunny.jpg', role: 'Commercial Team Member', year: '2nd Year Civil Engineering' },
+                {name: 'Andy Lee', src: 'images/people/andylee.jpg', role: 'Commercial Team Lead', year: '4th Year Specialization in Psychology, Minor in Business'},
+                {name: 'Minh Luu', src: 'images/people/Placeholder.jpg', role: 'Commercial Team Member', year: '2nd Year Mechanical Engineering, Biomedical Specialization'}
             ]
         },
         {
