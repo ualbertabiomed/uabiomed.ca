@@ -14,6 +14,12 @@
                     <ul>
                         <li><a on:click={()=>setSidebar(false)} href = '/team'>Test 1 (Team Page)</a></li>
                         <li><a on:click={()=>setSidebar(false)} href = '/exoskeleton'>Test 2 (Exoskeleton Page)</a></li>
+                        <li>
+                            <span class={submenu2StateString} on:click={toggleSubmenu2}>Test Sub-Submenu</span>
+                            <ul>
+                                <li><a on:click={()=>setSidebar(false)} href = '/team'>Test 3 (Team Page)</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -29,6 +35,7 @@
 <script>
     import { isSidebarEnabled } from '../stores/app.js'
     import { isSubmenuEnabled } from '../stores/app.js'
+    import { isSubmenu2Enabled } from '../stores/app.js'
 
     const links = [
         { loc: '/', name: 'About us', },
@@ -45,6 +52,9 @@
 
     $: submenuStateString = $isSubmenuEnabled ? 'opener active' : 'opener'
 
+    // testing sub-sub menu
+    $: submenu2StateString = $isSubmenu2Enabled ? 'opener active' : 'opener' 
+
     const toggleSidebar = (event) => {
         event.preventDefault()
         isSidebarEnabled.set(!$isSidebarEnabled)
@@ -55,6 +65,13 @@
     const toggleSubmenu = (event) => {
         event.preventDefault()
         isSubmenuEnabled.set(!$isSubmenuEnabled)
+        return false
+    }
+
+    // testing sub-sub menu
+    const toggleSubmenu2 = (event) => {
+        event.preventDefault()
+        isSubmenu2Enabled.set(!$isSubmenu2Enabled)
         return false
     }
 
