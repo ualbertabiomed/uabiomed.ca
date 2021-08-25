@@ -9,17 +9,6 @@
         margin-left: 10%;
         margin-top: 50px;
     }
-    img {
-        margin: 0 20px;
-        padding: 10px;
-    }
-    .img1 {
-        max-width: 20vw;
-    }
-    .img2 {
-        margin: 0;
-        max-width: 35vw;
-    }
     /* copy-pasted style from old page*/
     .img-pair {
         display: flex;
@@ -77,12 +66,14 @@
             outperformed most of the other sectors such as energy, financials,
             utilities, as well as the S&P 500 index itself.
         </p>
+    </div>
 
-        <div class="img-pair">
-            <img src="images/sp500.jpg" />
-            <img src="images/sector.jpg" />
-        </div>
+    <div class="img-pair">
+        <img src="images/sp500.jpg" />
+        <img src="images/sector.jpg" />
+    </div>
 
+    <div class="hor">
         <p>
             One reason for the substantial growth is the dramatically increasing
             global healthcare expenditure. The global healthcare expenditure is
@@ -130,10 +121,10 @@
             healthcare market. You will build your competitive advantage in the
             industry and ultimately increase your chance market.
         </p>
+    </div>
     
-        <div class="t">
-            <img src="images/tier-1-bio.png" />
-        </div>
+    <div class="t">
+        <img src="images/tier-1-bio.png" />
     </div>
 
 </div>
