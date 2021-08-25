@@ -3,7 +3,7 @@
     <p>
         Our Software, Mechanical, Website, and Commerical teams are all open to new members! Hit the link below to apply!
     </p>
-    <a href="https://forms.gle/L31cJbbFUnpcPqor8" target="_blank" rel="noopener noreferrer"> UABiomed </a>
+    <a href="https://forms.gle/L31cJbbFUnpcPqor8" target="_blank" rel="noopener noreferrer"> Join UABiomed </a>
 </section>
 
 <style>
