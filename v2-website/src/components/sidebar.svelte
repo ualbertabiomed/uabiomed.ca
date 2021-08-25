@@ -29,7 +29,9 @@
         { loc: '/exoskeleton', name: 'ALEX - The Exoskeleton', },
         { loc: '/3dwrist', name: '3D Wrist Project',},
         { loc: '/team', name: 'The Team', },
-        { loc: '/info', name: 'Why Join a Biomedical Engineering Group? (Non-STEM students)', },
+        //{ loc: '/info', name: 'Why Join a Biomedical Engineering Group? (Non-STEM students)', },
+        // updated 'Why join...' page link:
+        { loc: '/whyjoin', name: 'Why Join a Biomedical Engineering Group? (Non-STEM students)',},
         { loc: '/join', name: 'Join the Team', },
         { loc: '/press', name: 'Press and Educational Outreach', },
         { loc: '/contact', name: 'Contact Us', },
