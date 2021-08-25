@@ -58,7 +58,9 @@
             "counter-cyclical" industry, as it can usually retain stability during
             economic recessions.
         </p>
+    </div>
     
+    <div class="hor">
         <p>
             Over the past 10 years, the S&P 500 Healthcare
             Index went from 306.45 on Jun. 30, 2009 to 1071.79 as of Jul. 15, 2019,
@@ -82,7 +84,9 @@
             United States, the national healthcare expenditure went up to US $3.65
             trillion in 2018, added up to 17.14% of the country’s GDP.
         </p>
+    </div>
     
+    <div class="hor">
         <p>
             While it is good to see a strong-growing sector in the economy, the
             increasing cost of high-quality healthcare to individuals also raises
@@ -106,7 +110,9 @@
             corporate development, banking, accounting, consulting related to
             healthcare sector is truly phenomenal.
         </p>
+    </div>
     
+    <div class="hor">
         <p>
             UA Biomed is a one-of-a-kind student group at the University of
             Alberta, we have students from engineering, science, medicine and
