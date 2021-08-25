@@ -9,6 +9,7 @@
                 {#each links as link}
                     <li><a on:click={()=>setSidebar(false)} href={link.loc}>{link.name}</a></li>
                 {/each}
+                <!--
                 <li>
                     <span class={submenuStateString} on:click={toggleSubmenu}>Test Submenu</span>
                     <ul>
@@ -22,6 +23,7 @@
                         </li>
                     </ul>
                 </li>
+                -->
             </ul>
         </nav>
         <footer id="footer">
