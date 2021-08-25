@@ -1,7 +1,7 @@
 <section>
     <h2>Join the Team</h2>
     <p>
-        Our Mechanical, Electrical, Software, and Commerical teams are all open to new members! Hit the link below to apply!
+        Our Software, Mechanical, Website, and Commerical teams are all open to new members! Hit the link below to apply!
     </p>
     <a href="https://forms.gle/L31cJbbFUnpcPqor8"> Join UABiomed </a>
 </section>
