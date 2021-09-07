@@ -1,4 +1,12 @@
-<section>
+<style>
+    .page {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 50px;
+    }
+</style>
+
+<section class="page">
     <h2>Related Press</h2>
     {#each news as n}
         <News {...n} />
