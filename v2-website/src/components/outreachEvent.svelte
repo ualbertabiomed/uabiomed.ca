@@ -1,4 +1,4 @@
-<article class="page">
+<article>
     <p class='title'><b>{title}</b>, {date}</p>
     <div>
         <p>
@@ -23,11 +23,6 @@
     }
     .image-box {
         margin-bottom: 6em;
-    }
-    .page {
-        width: 80%;
-        margin-left: 10%;
-        margin-top: 50px;
     }
 </style>
 
