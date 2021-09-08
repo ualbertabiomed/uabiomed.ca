@@ -31,3 +31,11 @@
         </div>
     </form>
 </section>
+
+<style>
+    #learn-more {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 50px;
+    }
+</style>
