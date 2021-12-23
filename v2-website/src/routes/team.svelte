@@ -93,7 +93,7 @@
                 { name: 'Kiernan Carroll', src: 'images/people/Kiernan.jpg', role: 'Biomechanics Team Member - Motor Mount Specialist', year: '3rd Year Mechanical Engineering' },
                 */
                { name: 'Anakin Gill', src: 'images/people/anakin.png', role: 'Biomechanical Team Member', year: '2nd Year Mechanical Engineering, Biomedical Specialization', },
-               { name: 'Irina Manuel', src: 'images/people/Placeholder', role: 'Biomechanical Team Member', year: '2nd Year Mechanical Engineering', },
+               { name: 'Irina Manuel', src: 'images/people/Placeholder.jpg', role: 'Biomechanical Team Member', year: '2nd Year Mechanical Engineering', },
                { name: 'Eric Kwas', src: 'images/people/Eric.jpg', role: 'Biomechanical Team Member', year: '3rd Year Mechanical Engineering, Biomedical Specialization', },
                { name: 'Robyn de Wet', src: 'images/people/robyn_de_wet.png', role: 'Biomechanical Team Member', year: '3rd Year Mechanical Engineering', },
                { name: 'Madeleine Barton-Keener', src: 'images/people/madeleine.jpg', role: 'Biomechanical Team Member', year: '2nd Year Mechanical Engineering', },
