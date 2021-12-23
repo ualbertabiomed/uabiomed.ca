@@ -75,11 +75,13 @@
             ]
         },
         {
-            title: 'Biomechanics Team',
-            blurb: 'The Biomechanics team is working on the structural design of the exoskeleton. They investigate human motion and work to build an ergonomic and effective suit that the Control and Power team can bring to life.',
+            title: 'Biomechanical Team',
+            blurb: 'The Biomechanical team is working on the structural design of the exoskeleton. They investigate human motion and work to build an ergonomic and effective suit that the Control and Power team can bring to life.',
             members: [
-                { name: 'Isobel Tetreau', src: 'images/people/Isobel.jpg', role: 'Biomechanics Team Manager', year: '4th Year Mechanical Engineering, Biomedical Specialization' },
-                { name: 'Brianna Tolsma', src: 'images/people/Placeholder.jpg', role: 'Biomechanics Team Member', year: '' },
+                
+                //{ name: 'Isobel Tetreau', src: 'images/people/Isobel.jpg', role: 'Biomechanics Team Manager', year: '4th Year Mechanical Engineering, Biomedical Specialization' },
+                { name: 'Brianna Tolsma', src: 'images/people/Placeholder.jpg', role: 'Biomechanical Team Lead', year: '3rd Year Mechanical Engineering, Biomedical Specialization' },
+                /*
                 { name: 'Eric Kwas', src: 'images/people/Eric.jpg', role: 'Biomechanics Team Member, Lower Arm and Elbow', year: '2nd Year Mechanical Engineering' },
                 { name: 'Femi Akinola', src: 'images/people/Femi.jpg', role: 'Biomechanics Team Member, Lower Arm', year: '3rd Year Mechanical Engineering' },
                 { name: 'Mehtab Malik', src: 'images/people/Placeholder.jpg', role: 'Biomechanics Team Member, Elbow', year: '4th Year Mechanical Engineering' },
@@ -89,6 +91,14 @@
                 { name: 'Tully Underhill', src: 'images/people/Tully.jpg', role: 'Biomechanics Team Lead', year: '3rd Year Mechanical Engineering, Biomedical Specialization' },
                 { name: 'Isaiah Wong', src: 'images/people/Isaiah.jpg', role: 'Biomechanics Team Member - Motor Mount Specialist', year: '3rd Year Mechanical Engineering' },
                 { name: 'Kiernan Carroll', src: 'images/people/Kiernan.jpg', role: 'Biomechanics Team Member - Motor Mount Specialist', year: '3rd Year Mechanical Engineering' },
+                */
+               { name: 'Anakin Gill', src: 'images/people/anakin.png', role: 'Biomechanical Team Member', year: '2nd Year Mechanical Engineering, Biomedical Specialization', },
+               { name: 'Irina Manuel', src: 'images/people/Placeholder', role: 'Biomechanical Team Member', year: '2nd Year Mechanical Engineering', },
+               { name: 'Eric Kwas', src: 'images/people/Eric.jpg', role: 'Biomechanical Team Member', year: '3rd Year Mechanical Engineering, Biomedical Specialization', },
+               { name: 'Robyn de Wet', src: 'images/people/robyn_de_wet.png', role: 'Biomechanical Team Member', year: '3rd Year Mechanical Engineering', },
+               { name: 'Madeleine Barton-Keener', src: 'images/people/madeleine.jpg', role: 'Biomechanical Team Member', year: '2nd Year Mechanical Engineering', },
+               { name: 'Colleen Lam', src: 'images/people/colleen.png', role: 'Biomechanical Team Member', year: '2nd Year Mechanical Engineering', },
+               { name: 'Golie Masoumian', src: 'images/people/golie.png', role: 'Biomechanical Team Member', year: '3rd Year Mechanical Engineering', }
             ]
         },
         {
